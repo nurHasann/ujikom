@@ -41,7 +41,7 @@ $hargaDiskon = isset($_SESSION['harga_diskon']) ? $_SESSION['harga_diskon'] : ''
                         <?php if (empty($barangs)) { 
                                 echo "<h2>Tidak Ada Barang</h2>";
                             } else { ?>
-                            <tbody>
+                            <tbody> 
                             <?php foreach ($barangs as $x):  ?>
                             <?php
                                 $harga = $x->Harga;

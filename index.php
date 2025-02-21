@@ -27,11 +27,11 @@ include_once 'controllers/barang.php';
 <main>
 <?php if (empty($barangs)) { 
     echo "<h2>Tidak Ada Barang</h2>";
-} else { ?>
+} else { ?> 
     <?php foreach ($barangs as $x):  ?>
         <?php
             $harga = $x->Harga;
-            $diskon = isset($x->TotalDiskon) ? $x->TotalDiskon : 0;
+            $diskon = isset($x->Besarandiskon) ? $x->Besarandiskon : 0;
             $jumlahDiskon = ($diskon > 0) ? ($harga * $diskon) / 100 : 0;
             $hargaSetelahDiskon = $harga - $jumlahDiskon;
         ?>
